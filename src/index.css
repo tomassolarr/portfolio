@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply bg-gradient-animated;
+}
+
+body {
+  @apply font-onest;
+  
+}
+
+/* 🎨 Gradiente animado con movimiento*/
+.bg-gradient-animated {
+  background: radial-gradient(circle, #03484c, black, black, #03484c);
+  background-size: 500% 500%;
+  animation: gradientChaos 20s ease-in-out infinite alternate;
+}
+
+/* 🎥 Animación movimientos en múltiples direcciones */
+@keyframes gradientChaos {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
